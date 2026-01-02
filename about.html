@@ -2459,267 +2459,448 @@ header.fixed .navbar {
 
     </footer>
 
-    <style>
+   <style>
       /* ------Footer-Css-Start-------------- */
-      /* footer wraper */
+/* footer wraper */
 
-      :root {
-        --purple: #5b159a;
-        --purple-dark: #4a148c;
-        --yellow: #ffd400;
-        --white: #ffffff;
-      }
+:root {
+  --purple: #5b159a;
+  --purple-dark: #4a148c;
+  --yellow: #ffd400;
+  --white: #ffffff;
+}
+footer {
+    position: relative;
+    background-color:  #5b159a;
+    z-index: 999;
+}
 
-      footer {
-        position: relative;
-        background-color: #5b159a;
-        z-index: 999;
-      }
-
-      footer .top_footer {
-        padding: 40px 0 0 0;
-        /* ✅ CTA ke liye enough, overlap nahi */
-      }
+footer .top_footer {
+    padding: 40px 0 0 0;   /* ✅ CTA ke liye enough, overlap nahi */
+}
 
 
 
-      /* footer logo */
-      footer .top_footer .logo {
-        margin-bottom: 40px;
-      }
+/* footer logo */
+footer .top_footer .logo {
+    margin-bottom: 40px;
+}
 
-      footer .top_footer .logo img {
-        width: 130px;
-      }
+footer .top_footer .logo img {
+    width: 200px;
+}
 
-      footer .top_footer .abt_side .app_btn {
-        display: flex;
-      }
+footer .top_footer .abt_side .app_btn {
+    display: flex;
+}
 
-      footer .top_footer .abt_side .app_btn li {
-        margin: 0 20px 0 0;
-      }
+footer .top_footer .abt_side .app_btn li {
+    margin: 0 20px 0 0;
+}
 
-      footer .top_footer .abt_side li {
-        padding: 0 0 20px 0;
-      }
+footer .top_footer .abt_side li {
+    padding: 0 0 20px 0;
+}
 
-      footer .top_footer .abt_side p {
-        padding: 0 80px 20px 0;
-      }
+footer .top_footer .abt_side p {
+    padding: 0 80px 20px 0;
+}
 
-      /* footer social media icon */
-      footer .top_footer .social_media {
-        display: flex;
-        justify-content: center;
-      }
-
-      /* footer link list */
-      footer .top_footer .social_media li a {
-        display: block;
-        width: 37px;
-        height: 37px;
-        text-align: center;
-        line-height: 34px;
-        font-size: 15px;
-        border: 1px solid var(--border);
-        background-color: var(--black);
-        border-radius: 50px;
-        margin-right: 10px;
-        transition: .4s all;
-      }
-
-      footer .top_footer .social_media li a:hover {
-        background-color: var(--yellow);
-        color: var(--white);
-      }
-
-      footer .top_footer .try_out {
-        margin-left: -20px;
-      }
-
-      footer .app_btn li a {
-        display: block;
-        padding: 14px 24px;
-        background-color: #5b159a;
-        position: relative;
-        border-radius: 12px;
-        transition: .4s all;
-        text-align: center;
-      }
-
-      footer .app_btn li a img {
-        height: 36px;
-      }
-
-      footer .app_btn li a:hover {
-        background: var(--black);
-      }
-
-      footer .app_btn li a:hover img {
-        transition: .4s all;
-      }
-
-      footer .app_btn li:last-child {
-        margin-top: 20px;
-      }
-
-      footer .news_letter form .form-group {
-        max-width: 430px;
-        position: relative;
-      }
-
-      footer .news_letter form .form-group .form-control {
-        width: 100%;
-        background-color: var(--white);
-        border: 1px solid var(--border);
-        border-radius: 10px;
-        min-height: 60px;
-        color: var(--white);
-        font-weight: 500;
-      }
-
-      footer .news_letter form .form-group .form-control::placeholder {
-        color: var(--black);
-      }
-
-      footer .news_letter form .form-group button {
-        position: absolute;
-        right: 5px;
-        top: 5px;
-        background-color: var(--purple);
-        color: var(--white);
-        width: 50px;
-        height: 50px;
-        border-radius: 10px;
-        font-size: 20px;
-        transition: .4s all;
-      }
-
-      footer .news_letter form .form-group button:hover {
-        background-color: var(--black);
-        color: var(--white);
-      }
-
-      footer .news_letter form .note {
-        font-size: 14px;
-      }
-
-      /* footer heading and text colors variable */
-      footer h2,
-      footer p,
-      footer a {
-        color: var(--white);
-      }
+/* footer social media icon */
+footer .top_footer .social_media {
+    display: flex;
+    justify-content: center;
+}
 
 
-      footer a:hover {
-        color: var(--white);
-      }
+/* footer link list */
+footer .top_footer .social_media li a {
+    display: block;
+    width: 37px;
+    height: 37px;
+    text-align: center;
+    line-height: 34px;
+    font-size: 15px;
+    border: 1px solid var(--border);
+    background-color: var(--black);
+    border-radius: 50px;
+    margin-right: 10px;
+    transition: .4s all;
+}
 
-      /* footer heading h3 */
-      footer h5 {
-        position: relative;
-        font-size: 20px;
-        font-weight: 600;
-        margin-bottom: 55px;
-        padding-left: 10px;
-        line-height: .8;
-        color: yellow;
-      }
+footer .top_footer .social_media li a:hover {
+    background-color: var(--yellow);
+    color: var(--white);
+}
 
-      footer h5::before {
-        content: "";
-        width: 3px;
-        height: 18px;
-        background-color: var(--yellow);
-        position: absolute;
-        margin-left: -10px;
-      }
+footer .top_footer .try_out {
+    margin-left: -20px;
+}
 
-      footer .links ul li a {
-        display: block;
-        margin-bottom: 16px;
-        font-size: 16px;
-      }
+footer .app_btn li a {
+    display: block;
+    padding: 14px 24px;
+    background-color:  #5b159a;
+    position: relative;
+    border-radius: 12px;
+    transition: .4s all;
+    text-align: center;
+}
 
-      footer .links ul li a:hover {
-        color: var(--yellow);
-      }
+footer .app_btn li a img {
+    height: 36px;
+}
 
-      /* footer last */
-      footer .bottom_footer {
-        background-color: rgba(251, 91, 41, 0.1);
-        margin-top: 80px;
-        padding: 30px 0 20px 0;
-      }
+footer .app_btn li a:hover {
+    background: var(--black);
+}
 
-      footer .bottom_footer p {
-        margin-bottom: 0;
-        font-size: 14px;
-      }
+footer .app_btn li a:hover img {
+    transition: .4s all;
+}
 
-      footer .bottom_footer .developer_text {
-        text-align: right;
-      }
+footer .app_btn li:last-child {
+    margin-top: 20px;
+}
 
-      footer .bottom_footer .developer_text a {
-        text-decoration: underline;
-      }
+footer .news_letter form .form-group {
+    max-width: 430px;
+    position: relative;
+}
+
+footer .news_letter form .form-group .form-control {
+    width: 100%;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    min-height: 60px;
+    color: var(--white);
+    font-weight: 500;
+}
+
+footer .news_letter form .form-group .form-control::placeholder {
+    color: var(--black);
+}
+
+footer .news_letter form .form-group button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: var(--purple);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: .4s all;
+}
+
+footer .news_letter form .form-group button:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+footer .news_letter form .note {
+    font-size: 14px;
+}
+
+/* footer heading and text colors variable */
+footer h2,
+footer p,
+footer a {
+    color: var(--white);
+}
 
 
-      /* footer elements animation */
+footer a:hover {
+    color: var(--white);
+}
 
-      .top_footer .element .element1,
-      .element2 {
-        position: absolute;
-      }
+/* footer heading h3 */
+footer h5 {
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 55px;
+    padding-left: 10px;
+    line-height: .8;
+    color: var(--white);
+}
 
-      .top_footer .element .element1 {
-        left: 120px;
-        top: 200px;
-        animation: mymove 15s infinite;
-      }
+footer h5::before {
+    content: "";
+    width: 3px;
+    height: 18px;
+    background-color: var(--yellow);
+    position: absolute;
+    margin-left: -10px;
+}
 
-      .top_footer .element .element2 {
-        right: 70px;
-        bottom: 200px;
-        animation: mymove 10s infinite;
-      }
+footer .links ul li a {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
 
-      @keyframes mymove {
-        50% {
-          transform: rotate(180deg);
-        }
-      }
+footer .links ul li a:hover {
+    color: var(--yellow);
+}
+
+/* footer last */
+footer .bottom_footer {
+    background-color: rgba(251, 91, 41, 0.1);
+    margin-top: 80px;
+    padding: 30px 0 20px 0;
+}
+
+footer .bottom_footer p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+footer .bottom_footer .developer_text {
+    text-align: right;
+}
+
+footer .bottom_footer .developer_text a {
+    text-decoration: underline;
+}
 
 
-      /* footer go top button */
-      .go_top {
-        position: fixed;
-        right: 30px;
-        bottom: 110px;
-        cursor: pointer;
-        transition: .4s all;
-        display: none;
-        z-index: 100;
-      }
+/* footer elements animation */
 
-      .go_top span {
-        width: 50px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--primery);
-        color: var(--white);
-        border-radius: 150px;
-        font-size: 25px;
-      }
+.top_footer .element .element1, .element2 {
+    position: absolute;
+}
 
-      .go_top:hover {
-        bottom: 120px;
-      }
+.top_footer .element .element1 {
+    left: 120px;
+    top: 200px;
+    animation: mymove 15s infinite;
+}
+
+.top_footer .element .element2 {
+    right: 70px;
+    bottom: 200px;
+    animation: mymove 10s infinite;
+}
+
+@keyframes mymove {
+  50% {transform: rotate(180deg);}
+}
+
+
+/* footer go top button */
+.go_top {
+    position: fixed;
+    right: 30px;
+    bottom: 110px;
+    cursor: pointer;
+    transition: .4s all;
+    display: none;
+    z-index: 100;
+}
+
+.go_top span {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primery);
+    color: var(--white);
+    border-radius: 150px;
+    font-size: 25px;
+}
+
+.go_top:hover {
+    bottom: 120px;
+}
+
+/* ===============================
+   FOOTER MOBILE FORCE FIX
+================================ */
+@media (max-width: 768px) {
+
+  /* ===== TEXT CENTER ===== */
+  footer {
+    text-align: center !important;
+  }
+
+  /* ===== LOGO ===== */
+  footer .logo img {
+    margin: 0 auto !important;
+  }
+
+  /* ===== APP BUTTONS FIX ===== */
+  footer .app_btn {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  footer .app_btn li {
+    margin: 0 !important;
+  }
+
+  footer .app_btn li a {
+    width: 210px !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  /* ===== QUICK LINKS HEADING FIX ===== */
+  footer h5 {
+    text-align: center !important;
+    padding-left: 0 !important;
+  }
+
+  footer h5::before {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin-left: 0 !important;
+    top: -14px !important;
+  }
+
+  /* ===== QUICK LINKS LIST ===== */
+  footer .links ul {
+    padding-left: 0 !important;
+  }
+
+  footer .links ul li a {
+    text-align: center !important;
+    display: block !important;
+    padding: 6px 0 !important;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  /* ===== FOOTER WRAP ===== */
+  footer .top_footer {
+    padding: 30px 0 0 0;
+    text-align: center;
+  }
+
+  /* ===== LOGO ===== */
+  footer .top_footer .logo img {
+    width: 160px;
+    margin: 0 auto;
+  }
+
+  /* ===== ABOUT TEXT ===== */
+  footer .top_footer .abt_side p {
+    padding: 0;
+    font-size: 14px;
+  }
+
+  /* ===== APP BUTTONS ===== */
+  footer .top_footer .abt_side .app_btn {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .top_footer .abt_side .app_btn li {
+    margin: 0 0 15px 0;
+  }
+
+  footer .app_btn li:last-child {
+    margin-top: 0;
+  }
+
+  /* ===== SOCIAL ICONS ===== */
+  footer .top_footer .social_media {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  footer .top_footer .social_media li a {
+    margin-right: 8px;
+  }
+
+  /* ===== FOOTER HEADINGS ===== */
+  footer h5 {
+    margin-bottom: 25px;
+    text-align: left;
+  }
+
+  /* ===== LINKS ===== */
+  footer .links ul {
+    padding: 0;
+  }
+
+  footer .links ul li a {
+    font-size: 15px;
+  }
+
+  /* ===== NEWSLETTER ===== */
+  footer .news_letter form .form-group {
+    max-width: 100%;
+  }
+
+  footer .news_letter form .form-group .form-control {
+    min-height: 52px;
+    font-size: 14px;
+  }
+
+  footer .news_letter form .form-group button {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+
+  /* ===== BOTTOM FOOTER ===== */
+  footer .bottom_footer {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  footer .bottom_footer .developer_text {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* ===== FLOATING ELEMENTS HIDE ===== */
+  .top_footer .element {
+    display: none;
+  }
+
+  /* ===== GO TOP BUTTON ===== */
+  .go_top {
+    right: 20px;
+    bottom: 80px;
+  }
+
+  .go_top span {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  footer h5 {
+    position: relative !important;
+    text-align: center !important;
+    padding-left: 0 !important;
+  }
+
+  footer h5::before {
+    content: "" !important;
+    position: absolute !important;
+    top: -12px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 30px !important;
+    height: 3px !important;
+    background: var(--yellow) !important;
+  }
+}
+
+
     </style>
     <!-- Footer-Section end -->
 
