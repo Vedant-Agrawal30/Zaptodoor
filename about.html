@@ -136,69 +136,69 @@
   </script>
 
   <!-- Header Start -->
- <header>
-  <div class="container">
-    <nav class="navbar navbar-expand-lg">
+<!-- Header Start -->
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
 
-      <!-- LOGO -->
-      <a class="navbar-brand" href="index.html">
-        <img src="images/Zaptodoor Logo.png" alt="Logo">
-      </a>
+        <!-- LOGO -->
+        <a class="navbar-brand" href="index.html">
+          <img src="images/Zaptodoor Logo.png" alt="Logo">
+        </a>
 
-      <!-- MOBILE TOGGLER -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon">
-          <span class="toggle-wrap">
-            <span class="toggle-bar"></span>
+        <!-- MOBILE TOGGLER -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+            <span class="toggle-wrap">
+              <span class="toggle-bar"></span>
+            </span>
           </span>
-        </span>
-      </button>
+        </button>
 
-      <!-- MENU -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
+        <!-- MENU -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
 
-          <li class="nav-item nav-item active">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
+            <li class="nav-item nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
 
-          <li class="nav-item nav-item active">
-            <a class="nav-link" href="about.html">About Us</a>
-          </li>
+            <li class="nav-item nav-item active">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
 
-          <li class="nav-item nav-item active">
-            <a class="nav-link" href="services.html">Services</a>
-          </li>
+            <li class="nav-item nav-item active">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
 
-          <li class="nav-item nav-item active">
-            <a class="nav-link" href="press-release.html">Press Release</a>
-          </li>
+            <li class="nav-item nav-item active">
+              <a class="nav-link" href="press-release.html">Press Release</a>
+            </li>
 
-          <li class="nav-item nav-item active">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
+            <li class="nav-item nav-item active">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
 
-          <!-- DOWNLOAD BUTTON -->
-          <li class="nav-item" id="ved">
-            <div class="btn_block">
-              <a class="nav-link dark_btn download-btn Vedant" href="https://play.google.com/store/apps/details?id=com.zaptodoor.user&pcampaignid=web_share" id="download-btn-fixed">
-                Download
-                <img src="images/dwnarrow.svg"
-                  style="height:16px;margin-left:8px;filter:brightness(0) invert(1);">
-              </a>
-              <div class="btn_bottom"></div>
-            </div>
-          </li>
+            <!-- DOWNLOAD BUTTON -->
+            <li class="nav-item" id="ved" style="margin-left: 0px;">
+              <div class="btn_block">
+                <a class="nav-link dark_btn download-btn " href="#" id="download-btn-fixed">
+                  Download
+                  <img src="images/dwnarrow.svg" style="height:16px;margin-left:8px;filter:brightness(0) invert(1);">
+                </a>
+                <div class="btn_bottom"></div>
+              </div>
+            </li>
 
-        </ul>
-      </div>
-    </nav>
-  </div>
-</header>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-<style>
-  /* -----------Css-variable------ */
+  <style>
+   /* -----------Css-variable------ */
 
 :root {
     --primery: #4c0996;
@@ -342,7 +342,7 @@ h6 {
     display: inline-block;
     padding: 2px 18px;
     border-radius: 100px;
-    background-color: var(--primery);
+    background-color: var(--light-primery);
     margin-bottom: 10px;
     text-transform: uppercase;
     font-weight: 700;
@@ -661,9 +661,18 @@ header.fixed .navbar {
     padding: 0;
 }
 
+/* ========== NAVBAR PERFECT ALIGNMENT ========== */
+
 /* navigation bar */
 .navbar {
     padding: 15px 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
 }
 
 .navbar-expand-lg .navbar-nav {
@@ -671,34 +680,53 @@ header.fixed .navbar {
     display: flex;
     width: 100%;
     justify-content: center;
+    position: relative;
 }
 
+/* Download button ko right side */
+.navbar-expand-lg .navbar-nav .nav-item#ved {
+    position: absolute;
+    right: 0;
+    margin-left: 0 !important;
+}
 
 .navbar-expand-lg .navbar-nav .nav-link {
-    padding: 30px 12px;
+    padding: 8px 12px;
     font-weight: 600;
     transition: .4s all;
     color: var(--black);
+    display: flex;
+    align-items: center;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link:hover {
     color: #8a4fff;
 }
 
+.navbar-expand-lg .navbar-nav .nav-item {
+    display: flex;
+    align-items: center;
+}
+
 .navbar-expand-lg .navbar-nav .nav-item .btn_block {
     margin-left: 30px;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link.dark_btn {
     color: var(--white);
     background-color: #4c0996;
     font-size: 16px;
-    padding: 9px 40px;
+    padding: 12px 40px;
     border-radius: 8px;
     position: relative;
     transition: .4s all;
     z-index: 2;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link.dark_btn::before {
@@ -917,18 +945,24 @@ header.fixed .navbar {
     }
     
     /* Mobile menu styles */
-.navbar-collapse {
-    background-color: var(--white);
-    padding: 20px 20px 35px; /* 👈 bottom space */
-    margin-top: 15px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    overflow: visible; /* 👈 VERY IMPORTANT */
-}
+    .navbar-collapse {
+        background-color: var(--white);
+        padding: 20px 20px 35px;
+        margin-top: 15px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        overflow: visible;
+    }
 
     .navbar-expand-lg .navbar-nav {
         flex-direction: column;
         align-items: flex-start;
+    }
+    
+    /* Download button mobile fix */
+    .navbar-expand-lg .navbar-nav .nav-item#ved {
+        position: static !important;
+        right: auto !important;
     }
     
     .navbar-expand-lg .navbar-nav .nav-link {
@@ -946,15 +980,12 @@ header.fixed .navbar {
         margin-top: 10px;
     }
     
-  @media (max-width: 991px) {
-  .navbar-expand-lg .navbar-nav .nav-link.dark_btn {
-      width: 100%;
-      display: block;
-      text-align: center;
-      margin-top: 18px;
-  }
-}
-
+    .navbar-expand-lg .navbar-nav .nav-link.dark_btn {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 18px;
+    }
     
     /* Dropdown menu mobile styles */
     .navbar-expand-lg .navbar-nav .has_dropdown {
@@ -1124,8 +1155,9 @@ header.fixed .navbar {
 .navbar-expand-lg .navbar-nav .nav-link::after {
     content: "";
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2px;
     width: 0;
     height: 2px;
     background-color: var(--primery);
@@ -1147,7 +1179,22 @@ header.fixed .navbar {
     display: none;
 }
 
-</style>
+/* Desktop ke liye - First nav item ko left shift */
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-item:first-child {
+        margin-left: -150px; /* ✅ Desktop ke liye */
+    }
+}
+
+/* Mobile fix */
+@media (max-width: 991px) {
+    .navbar-expand-lg .navbar-nav .nav-item:first-child {
+        margin-left: 0 !important; /* ✅ Mobile pe reset */
+    }
+}
+  </style>
+
+  <!-- Header End -->
 
   <!-- BredCrumb-Section -->
   <div class="bred_crumb">
@@ -1180,17 +1227,15 @@ header.fixed .navbar {
               <div class="title_badge">
                 <span style="color: #f3f4ff;">Overview</span>
               </div>
-              <h2>How we serve best food on time to you in town. </h2>
-              <p>Lorem Ipsum is simply dummy text of the printing and typtting
-                industry lorem Ipsum has been the
-                industrys standard dummy text ever since.</p>
+              <h2>How we serve the best food on time in town. </h2>
+              <p>We partner with trusted local restaurants and use smart delivery routing to ensure your food reaches you fresh, fast, and right on time. From order placement to doorstep delivery, every step is designed for quality and reliability.</p>
               <ul class="feature_list">
                 <li>
                   <div class="icon">
                     <span><i class="icofont-check-circled"></i></span>
                   </div>
                   <div class="text">
-                    <p>Lorem Ipsum is simply dummy text</p>
+                    <p>Verified restaurants and quality checks</p>
                   </div>
                 </li>
                 <li>
@@ -1198,7 +1243,7 @@ header.fixed .navbar {
                     <span><i class="icofont-check-circled"></i></span>
                   </div>
                   <div class="text">
-                    <p>The printing and typesetting industry lorem</p>
+                    <p>Real-time order tracking & smart delivery management</p>
                   </div>
                 </li>
                 <li>
@@ -1206,7 +1251,7 @@ header.fixed .navbar {
                     <span><i class="icofont-check-circled"></i></span>
                   </div>
                   <div class="text">
-                    <p>Has been the industrys dummy</p>
+                    <p>Secure online payments with instant confirmation</p>
                   </div>
                 </li>
                 <li>
@@ -1214,12 +1259,12 @@ header.fixed .navbar {
                     <span><i class="icofont-check-circled"></i></span>
                   </div>
                   <div class="text">
-                    <p>Text ever since the when an unknown </p>
+                    <p>Dedicated support for a smooth experience</p>
                   </div>
                 </li>
               </ul>
               <div class="btn_block">
-                <a href="#" class="btn puprple_btn ml-0">Start Free Trial</a>
+                <a href="https://play.google.com/store/apps/details?id=com.zaptodoor.user&pcampaignid=web_share" class="btn puprple_btn ml-0">Download</a>
               </div>
             </div>
           </div>
@@ -1269,8 +1314,7 @@ header.fixed .navbar {
           <div class="section_title" data-aos="fade-up" data-aos-duration="1500">
             <span class="title_badge" style="color: #f3f4ff; background-color: #4c0996;">Why choos us</span>
             <h2>Company statistics</h2>
-            <p> Lorem Ipsum is simply dummy text of the printing indus orem Ipsum has been the industrys standard dummy
-              text ever since.</p>
+            <p> Our growing numbers reflect the trust of thousands of users and restaurant partners. We continue to deliver quality food, fast service, and a seamless experience every day.</p>
           </div>
           <div class="company_statistics">
             <ul class="app_statstic" id="counter" data-aos="fade-in" data-aos-duration="1500">
@@ -1315,10 +1359,7 @@ header.fixed .navbar {
         <div class="section_title" data-aos="fade-up" data-aos-duration="1500">
           <span class="title_badge" style="color: #f3f4ff; background-color: #4c0996;">Who we are</span>
           <h2>Fastest delivery in town: <br> Enjoy tasty dishes at your place any time! </h2>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the
-            industrys standard dummy text ever since the when an unknown printer took a galley of type and scrambled it
-            to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-            typesetting, remaining essentially unchanged.</p>
+          <p>We are a modern food delivery platform built to connect you with the best local restaurants around you. Our mission is simple — deliver fresh, delicious food quickly while ensuring a smooth and reliable ordering experience for every customer.</p>
         </div>
       </div>
       <div class="about_slider row_am" data-aos="fade-in" data-aos-duration="1500">
@@ -1390,8 +1431,7 @@ header.fixed .navbar {
                 <span style="color: #f3f4ff;">Our Mission</span>
               </div>
               <h2>Why we best for food delivery.</h2>
-              <p>We're on a mission to become India's top online retailer for essential goods. Everyone deserves access to premium
-              quality products at pocket-friendly prices. Here's how we do it:</p>
+              <p>Is “Our Mission / Why we best for food delivery” section ke liye food-delivery focused, clear aur trust-building content de raha hoon. Existing lorem/retail text ko replace kar do 👇</p>
               <ul class="feature_list">
                 <li>
                   <div class="icon">
@@ -1426,9 +1466,9 @@ header.fixed .navbar {
                   </div>
                 </li>
               </ul>
-              <div class="btn_block">
-                <a href="#" class="btn puprple_btn ml-0">Start Free Trial</a>
-              </div>
+              <!-- <div class="btn_block">
+                <a href="#" class="btn puprple_btn ml-0">Download</a>
+              </div> -->
             </div>
           </div>
           <div class="col-md-6">
@@ -1544,6 +1584,54 @@ header.fixed .navbar {
         align-items: center;
       }
 
+      .text_list_section {
+  margin-top: -40px;
+  overflow: hidden;
+}
+
+.text_list_section .slider_block {
+  background-color: var(--primery);
+  padding: 20px 0;
+  transform: rotate(-1.5deg);
+  width: 100%;
+  overflow-x: hidden;
+  margin-bottom: 30px;
+}
+
+/* Down fix slider ko hide kar do */
+.text_list_section .down_fix {
+  display: none;
+}
+
+.text_list_section.rotet_down {
+  transform: rotate(0.5deg);
+}
+
+.text_list_section .owl-stage,
+.text_list_section .owl-stage-outer,
+.textFlow_list .owl-stage,
+.textFlow_list .owl-stage-outer {
+  height: 55px;
+}
+
+.text_block {
+  display: flex;
+  align-items: center;
+}
+
+.text_block span {
+  color: var(--white);
+  font-size: 50px;
+  font-family: var(--font-bebas);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.text_block .mark_star {
+  margin: 0 60px;
+  font-family: 'Playball', cursive;
+}
+
       .text_block span {
         color: var(--white);
         font-size: 50px;
@@ -1570,8 +1658,7 @@ header.fixed .navbar {
           <div class="section_title" data-aos="fade-up" data-aos-duration="1500">
             <span class="title_badge" style="color: #f3f4ff; background-color: #4c0996;">Reviews</span>
             <h2>Client Testimonials</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing indus orem Ipsum has been the industrys standard
-              dummy text ever since.</p>
+            <p>Ordering food is just a few taps away, and I always receive my meals fresh and on time. The app is smooth and very easy to use.</p>
           </div>
 
           <div class="testimonial_slides">
@@ -1864,8 +1951,7 @@ header.fixed .navbar {
                 <span class="title_badge" style="color: #f3f4ff;">Download</span>
                 <h2>Download app to enjoy 4500+ foods </h2>
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing
-                  indus orem Ipsum has been the industrys.
+                  Discover thousands of delicious dishes from your favorite local restaurants. Order in seconds, track in real time, and get fresh food delivered right to your doorstep.
                 </p>
               </div>
               <!-- app buttons -->
@@ -1926,8 +2012,7 @@ header.fixed .navbar {
                   <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                     data-parent="#accordionExample">
                     <div class="card-body">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsu m has been
-                      the industrys standard dummy text ever since the when an unknown printer.
+                     Yes! If you love ordering food online, discovering new restaurants, and getting fast delivery at your doorstep, this app is perfect for you.
                     </div>
                   </div>
                 </div>
@@ -1946,9 +2031,7 @@ header.fixed .navbar {
                   </div>
                   <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                     <div class="card-body">
-                      Some placeholder content for the second accordion panel. This panel is
-                      hidden by
-                      default.
+                     No. There are no hidden charges. All prices, delivery fees, and taxes are clearly shown before you place an order.
                     </div>
                   </div>
                 </div>
@@ -1957,7 +2040,7 @@ header.fixed .navbar {
                     <h5 class="mb-0">
                       <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
                         data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Can i get update for free ?
+                       What is the process to get a refund?
                         <span class="icons">
                           <i class="icofont-plus"></i>
                           <i class="icofont-minus"></i>
@@ -1968,9 +2051,7 @@ header.fixed .navbar {
                   <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                     data-parent="#accordionExample">
                     <div class="card-body">
-                      And lastly, the placeholder content for the third and final accordion panel.
-                      This
-                      panel is hidden by default.
+                      If your order is cancelled or there’s an issue, you can request a refund directly from the app. Refunds are processed within 3–5 working days to your original payment method.
                     </div>
                   </div>
                 </div>
@@ -1989,9 +2070,7 @@ header.fixed .navbar {
                   </div>
                   <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
                     <div class="card-body">
-                      Some placeholder content for the second accordion panel. This panel is
-                      hidden by
-                      default.
+                     Download the app, sign up using your mobile number or email, verify with OTP, and you’re ready to start ordering.
                     </div>
                   </div>
                 </div>
@@ -2002,7 +2081,7 @@ header.fixed .navbar {
                     <h5 class="mb-0">
                       <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
                         data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
-                        Is there any hidden cost?
+                     Can I track my order in real time?
                         <span class="icons">
                           <i class="icofont-plus"></i>
                           <i class="icofont-minus"></i>
@@ -2012,9 +2091,7 @@ header.fixed .navbar {
                   </div>
                   <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordionExample">
                     <div class="card-body">
-                      Some placeholder content for the second accordion panel. This panel is
-                      hidden by
-                      default.
+                     Absolutely. You can track your order live from preparation to delivery right inside the app.
                     </div>
                   </div>
                 </div>
@@ -2023,7 +2100,7 @@ header.fixed .navbar {
                     <h5 class="mb-0">
                       <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
                         data-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
-                        What is process to get refund ?
+                        Can I cancel my order after placing it?
                         <span class="icons">
                           <i class="icofont-plus"></i>
                           <i class="icofont-minus"></i>
@@ -2033,9 +2110,7 @@ header.fixed .navbar {
                   </div>
                   <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#accordionExample">
                     <div class="card-body">
-                      And lastly, the placeholder content for the third and final accordion panel.
-                      This
-                      panel is hidden by default.
+                     Yes, you can cancel your order before it is prepared by the restaurant. Once preparation starts, cancellation may not be available.
                     </div>
                   </div>
                 </div>
@@ -2044,7 +2119,7 @@ header.fixed .navbar {
                     <h5 class="mb-0">
                       <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
                         data-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
-                        How to setup account ?
+                       What if I receive wrong or damaged food?
                         <span class="icons">
                           <i class="icofont-plus"></i>
                           <i class="icofont-minus"></i>
@@ -2055,9 +2130,7 @@ header.fixed .navbar {
                   <div id="collapseseven" class="collapse" aria-labelledby="headingseven"
                     data-parent="#accordionExample">
                     <div class="card-body">
-                      And lastly, the placeholder content for the third and final accordion panel.
-                      This
-                      panel is hidden by default.
+                     If you receive an incorrect or damaged order, report it in the app with details. Our team will review and provide a replacement or refund.
                     </div>
                   </div>
                 </div>
@@ -2066,7 +2139,7 @@ header.fixed .navbar {
                     <h5 class="mb-0">
                       <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
                         data-target="#collapseeight" aria-expanded="false" aria-controls="collapseeight">
-                        What is process to get refund ?
+                       Do restaurants follow hygiene standards?
                         <span class="icons">
                           <i class="icofont-plus"></i>
                           <i class="icofont-minus"></i>
@@ -2077,14 +2150,12 @@ header.fixed .navbar {
                   <div id="collapseeight" class="collapse" aria-labelledby="headingeight"
                     data-parent="#accordionExample">
                     <div class="card-body">
-                      And lastly, the placeholder content for the third and final accordion panel.
-                      This
-                      panel is hidden by default.
+                     Yes. We partner only with restaurants that follow strict hygiene and quality guidelines.
                     </div>
                   </div>
                 </div>
                 <div class="card">
-                  <div class="card-header" id="headingnine">
+                  <!-- <div class="card-header" id="headingnine">
                     <h5 class="mb-0">
                       <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
                         data-target="#collapsenine" aria-expanded="false" aria-controls="collapsenine">
@@ -2095,14 +2166,14 @@ header.fixed .navbar {
                         </span>
                       </button>
                     </h5>
-                  </div>
-                  <div id="collapsenine" class="collapse" aria-labelledby="headingnine" data-parent="#accordionExample">
+                  </div> -->
+                  <!-- <div id="collapsenine" class="collapse" aria-labelledby="headingnine" data-parent="#accordionExample">
                     <div class="card-body">
                       And lastly, the placeholder content for the third and final accordion panel.
                       This
                       panel is hidden by default.
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -2113,7 +2184,7 @@ header.fixed .navbar {
     <!-- FAQ Section End -->
 
     <!-- call to action -->
-    <section class="cta_section new white_text" id="support_sec">
+    <section class="cta_section new white_text" id="support_sec" style="margin-top: 15px; max-width: 100;">
       <!-- container start -->
       <div class="container">
         <div class="cta_box">
@@ -2155,6 +2226,18 @@ header.fixed .navbar {
 
       .cta_section.new {
         padding-top: 50px;
+        max-width: 100%;
+        margin-right: 12px;
+        margin-left: 12px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .cta_section.new .container {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
       }
 
       .cta_section.new .cta_box {
@@ -2165,10 +2248,13 @@ header.fixed .navbar {
         padding: 60px 50px;
         display: flex;
         flex-direction: column;
-        /* 🔥 CHANGED: vertical layout */
         justify-content: center;
         align-items: center;
         margin-bottom: -100px;
+        max-width: 100%;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
       }
 
       .cta_section.new .cta_box .section_title {
@@ -2177,26 +2263,20 @@ header.fixed .navbar {
         flex-wrap: wrap;
         width: 100%;
         padding-left: 0;
-        /* 🔥 CHANGED: remove left padding */
         text-align: center;
-        /* 🔥 ADDED: center text */
         justify-content: center;
-        /* 🔥 ADDED: center content */
         margin-bottom: 30px;
-        /* 🔥 ADDED: space between heading and buttons */
       }
 
       .cta_section.new .cta_box .section_title h3 {
         margin-bottom: 0;
         line-height: 1.2;
         width: 100%;
-        /* 🔥 ADDED: full width for centering */
       }
 
       .cta_section.new .cta_box .section_title p {
         padding: 0;
         width: 100%;
-        /* 🔥 ADDED: full width for centering */
       }
 
       .cta_section.new .cta_box .section_title .customer_icon {
@@ -2208,7 +2288,6 @@ header.fixed .navbar {
       .cta_section.new .cta_box .btn_block {
         display: flex;
         justify-content: center;
-        /* 🔥 CHANGED: center buttons */
         align-items: center;
         gap: 15px;
         flex-wrap: nowrap;
@@ -2265,7 +2344,6 @@ header.fixed .navbar {
 
       .cta_section.new .cta_box .right {
         width: 100%;
-        /* 🔥 CHANGED: full width */
       }
 
       .cta_section.new .cta_box .element .element1,
@@ -2355,8 +2433,7 @@ header.fixed .navbar {
             <div class="col-lg-5 col-md-6 col-12">
               <div class="abt_side">
                 <div class="logo"> <img src="images/Zaptodoor New Logo white.png" alt="image"></div>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem sum has been the
-                  industrys standard dummytext ever since the when an unknown printer took. </p>
+                <p>Zaptodoor is a modern food delivery platform connecting you with trusted local restaurants. We make ordering food fast, simple, and reliable — delivering delicious meals right to your doorstep.</p>
                 <ul class="app_btn">
                   <li>
                     <a href="#">

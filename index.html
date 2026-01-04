@@ -129,70 +129,69 @@
       });
   </script>
 
-  <!-- Header Start -->
- <header>
-  <div class="container">
-    <nav class="navbar navbar-expand-lg">
+<!-- Header Start -->
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
 
-      <!-- LOGO -->
-      <a class="navbar-brand" href="index.html">
-        <img src="images/Zaptodoor Logo.png" alt="Logo">
-      </a>
+        <!-- LOGO -->
+        <a class="navbar-brand" href="index.html">
+          <img src="images/Zaptodoor Logo.png" alt="Logo">
+        </a>
 
-      <!-- MOBILE TOGGLER -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon">
-          <span class="toggle-wrap">
-            <span class="toggle-bar"></span>
+        <!-- MOBILE TOGGLER -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+            <span class="toggle-wrap">
+              <span class="toggle-bar"></span>
+            </span>
           </span>
-        </span>
-      </button>
+        </button>
 
-      <!-- MENU -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
+        <!-- MENU -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
 
-          <li class="nav-item nav-item active">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
+            <li class="nav-item nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
 
-          <li class="nav-item nav-item active">
-            <a class="nav-link" href="about.html">About Us</a>
-          </li>
+            <li class="nav-item nav-item active">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
 
-          <li class="nav-item nav-item active">
-            <a class="nav-link" href="services.html">Services</a>
-          </li>
+            <li class="nav-item nav-item active">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
 
-          <li class="nav-item nav-item active">
-            <a class="nav-link" href="press-release.html">Press Release</a>
-          </li>
+            <li class="nav-item nav-item active">
+              <a class="nav-link" href="press-release.html">Press Release</a>
+            </li>
 
-          <li class="nav-item nav-item active">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
+            <li class="nav-item nav-item active">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
 
-          <!-- DOWNLOAD BUTTON -->
-          <li class="nav-item" id="ved">
-            <div class="btn_block">
-              <a class="nav-link dark_btn download-btn Vedant" href="https://play.google.com/store/apps/details?id=com.zaptodoor.user&pcampaignid=web_share" id="download-btn-fixed">
-                Download
-                <img src="images/dwnarrow.svg"
-                  style="height:16px;margin-left:8px;filter:brightness(0) invert(1);">
-              </a>
-              <div class="btn_bottom"></div>
-            </div>
-          </li>
+            <!-- DOWNLOAD BUTTON -->
+            <li class="nav-item" id="ved" style="margin-left: 0px;">
+              <div class="btn_block">
+                <a class="nav-link dark_btn download-btn " href="#" id="download-btn-fixed">
+                  Download
+                  <img src="images/dwnarrow.svg" style="height:16px;margin-left:8px;filter:brightness(0) invert(1);">
+                </a>
+                <div class="btn_bottom"></div>
+              </div>
+            </li>
 
-        </ul>
-      </div>
-    </nav>
-  </div>
-</header>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-<style>
-  /* -----------Css-variable------ */
+  <style>
+   /* -----------Css-variable------ */
 
 :root {
     --primery: #4c0996;
@@ -655,9 +654,18 @@ header.fixed .navbar {
     padding: 0;
 }
 
+/* ========== NAVBAR PERFECT ALIGNMENT ========== */
+
 /* navigation bar */
 .navbar {
     padding: 15px 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
 }
 
 .navbar-expand-lg .navbar-nav {
@@ -665,34 +673,53 @@ header.fixed .navbar {
     display: flex;
     width: 100%;
     justify-content: center;
+    position: relative;
 }
 
+/* Download button ko right side */
+.navbar-expand-lg .navbar-nav .nav-item#ved {
+    position: absolute;
+    right: 0;
+    margin-left: 100px !important;
+}
 
 .navbar-expand-lg .navbar-nav .nav-link {
-    padding: 30px 12px;
+    padding: 8px 12px;
     font-weight: 600;
     transition: .4s all;
     color: var(--black);
+    display: flex;
+    align-items: center;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link:hover {
     color: #8a4fff;
 }
 
+.navbar-expand-lg .navbar-nav .nav-item {
+    display: flex;
+    align-items: center;
+}
+
 .navbar-expand-lg .navbar-nav .nav-item .btn_block {
     margin-left: 30px;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link.dark_btn {
     color: var(--white);
     background-color: #4c0996;
     font-size: 16px;
-    padding: 9px 40px;
+    padding: 12px 40px;
     border-radius: 8px;
     position: relative;
     transition: .4s all;
     z-index: 2;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link.dark_btn::before {
@@ -911,18 +938,24 @@ header.fixed .navbar {
     }
     
     /* Mobile menu styles */
-.navbar-collapse {
-    background-color: var(--white);
-    padding: 20px 20px 35px; /* 👈 bottom space */
-    margin-top: 15px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    overflow: visible; /* 👈 VERY IMPORTANT */
-}
+    .navbar-collapse {
+        background-color: var(--white);
+        padding: 20px 20px 35px;
+        margin-top: 15px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        overflow: visible;
+    }
 
     .navbar-expand-lg .navbar-nav {
         flex-direction: column;
         align-items: flex-start;
+    }
+    
+    /* Download button mobile fix */
+    .navbar-expand-lg .navbar-nav .nav-item#ved {
+        position: static !important;
+        right: auto !important;
     }
     
     .navbar-expand-lg .navbar-nav .nav-link {
@@ -940,15 +973,12 @@ header.fixed .navbar {
         margin-top: 10px;
     }
     
-  @media (max-width: 991px) {
-  .navbar-expand-lg .navbar-nav .nav-link.dark_btn {
-      width: 100%;
-      display: block;
-      text-align: center;
-      margin-top: 18px;
-  }
-}
-
+    .navbar-expand-lg .navbar-nav .nav-link.dark_btn {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 18px;
+    }
     
     /* Dropdown menu mobile styles */
     .navbar-expand-lg .navbar-nav .has_dropdown {
@@ -1118,8 +1148,9 @@ header.fixed .navbar {
 .navbar-expand-lg .navbar-nav .nav-link::after {
     content: "";
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2px;
     width: 0;
     height: 2px;
     background-color: var(--primery);
@@ -1141,9 +1172,22 @@ header.fixed .navbar {
     display: none;
 }
 
-</style>
+/* Desktop ke liye - First nav item ko left shift */
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-item:first-child {
+        margin-left: -150px; /* ✅ Desktop ke liye */
+    }
+}
 
- <!-- Header End -->
+/* Mobile fix */
+@media (max-width: 991px) {
+    .navbar-expand-lg .navbar-nav .nav-item:first-child {
+        margin-left: 0 !important; /* ✅ Mobile pe reset */
+    }
+}
+  </style>
+
+  <!-- Header End -->
 
 
 
@@ -1305,7 +1349,7 @@ header.fixed .navbar {
           <!-- h2 -->
           <h2>Why choose us</h2>
           <!-- p -->
-          <p>Lorem Ipsum is simply dummy text of the printing and typese tting indus orem Ipsum has beenthe standard dummy.</p>
+          <p>At Zaptodoor, we focus on delivering fast, reliable, and customer-centric solutions. Our platform connects you with trusted professionals, ensures transparent pricing, and guarantees quality service — all with a seamless digital experience you can rely on.</p>
         </div>
 
         <div class="feature_detail">
@@ -1399,7 +1443,7 @@ header.fixed .navbar {
           <!-- h2 -->
           <h2>Access over 1000+ dishes with just a tap</h2>
           <!-- p -->
-          <p>Lorem Ipsum is simply dummy text of the printing and typese tting indus orem Ipsum has beenthe standard dummy.</p>
+          <p>Explore a wide variety of cuisines from top-rated kitchens near you. From quick bites to full meals, discover delicious food anytime and order effortlessly in seconds.</p>
         </div>
       </div>
       <!-- container end -->
@@ -1669,7 +1713,7 @@ header.fixed .navbar {
           <div class="section_title" >
             <span class="title_badge" style="color: #f3f4ff; background-color: #4c0996;">benefits</span>
             <h2>Win-win for restaurants & users alike</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing indus orem Ipsum has been the industrys standard dummy text ever since.</p>
+            <p>We create value for everyone. Restaurants get increased visibility and more orders, while users enjoy a wide variety of dishes, easy ordering, and a seamless food experience — all on one platform.</p>
           </div>
 
           <!-- block list -->
@@ -1684,8 +1728,8 @@ header.fixed .navbar {
                         <img src="images/Benefits 1.png" alt="image">
                       </div>
                       <div class="text">
-                        <h4>Effortless management of restaurant operations</h4>
-                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummytext.</p>
+                        <h4>🏪 Effortless management of restaurant operations</h4>
+                        <p> Manage your restaurant with ease using our smart, all-in-one platform. Track orders in real time, streamline operations, and focus on what matters most — delivering great food and growing your business.</p>
                         <ul class="win_list">
                             <li>
                               <div class="icon">
@@ -1700,7 +1744,7 @@ header.fixed .navbar {
                                 <span><i class="icofont-check-circled"></i></span>
                               </div>
                               <div class="li_text">
-                                <p>Sale system connectivity</p>
+                                <p>Seamless POS & sales system connectivity</p>
                               </div>
                             </li>
                             <li>
@@ -1708,7 +1752,7 @@ header.fixed .navbar {
                                 <span><i class="icofont-check-circled"></i></span>
                               </div>
                               <div class="li_text">
-                                <p>Upfront payment by customers</p>
+                                <p>Upfront payments from customers</p>
                               </div>
                             </li>
                             <li>
@@ -1716,7 +1760,7 @@ header.fixed .navbar {
                                 <span><i class="icofont-check-circled"></i></span>
                               </div>
                               <div class="li_text">
-                                <p>More orders</p>
+                                <p>Increased visibility & more orders</p>
                               </div>
                             </li>
                         </ul>
@@ -1734,15 +1778,15 @@ header.fixed .navbar {
                           <img src="images/Benefits 2.png" alt="image">
                       </div>
                         <div class="text">
-                          <h4>Seamless ordering process from app for customers</h4>
-                          <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummytext.</p>
+                          <h4>📱 Seamless ordering process from app for customers</h4>
+                          <p> Enjoy a smooth and hassle-free food ordering experience right from your phone. Discover nearby restaurants, place orders in seconds, and track your delivery in real time — all in one app.</p>
                           <ul class="win_list">
                               <li>
                                 <div class="icon">
                                   <span><i class="icofont-check-circled"></i></span>
                                 </div>
                                 <div class="li_text">
-                                  <p>Handling of orders</p>
+                                  <p>Easy & fast order placement</p>
                                 </div>
                               </li>
                               <li>
@@ -1750,7 +1794,7 @@ header.fixed .navbar {
                                   <span><i class="icofont-check-circled"></i></span>
                                 </div>
                                 <div class="li_text">
-                                  <p>Sale system connectivity</p>
+                                  <p>Multiple secure payment options</p>
                                 </div>
                               </li>
                               <li>
@@ -1758,7 +1802,7 @@ header.fixed .navbar {
                                   <span><i class="icofont-check-circled"></i></span>
                                 </div>
                                 <div class="li_text">
-                                  <p>Upfront payment by customers</p>
+                                  <p>Live order tracking</p>
                                 </div>
                               </li>
                               <li>
@@ -1766,7 +1810,7 @@ header.fixed .navbar {
                                   <span><i class="icofont-check-circled"></i></span>
                                 </div>
                                 <div class="li_text">
-                                  <p>More orders</p>
+                                  <p>Wide variety of restaurants & dishes</p>
                                 </div>
                               </li>
                           </ul>
@@ -1805,7 +1849,7 @@ header.fixed .navbar {
 	        <div class="section_title" >
 	          <span class="title_badge" style="color: #f3f4ff; background-color: #4c0996;">Easy Steps</span>
 	          <h2>How it Works</h2>
-	          <p>Lorem Ipsum is simply dummy text of the printing indus orem Ipsum has been the industrys standard dummy text ever since.</p>
+	          <p>Order your favorite food in just 3 simple steps.</p>
 	        </div>
 
 	        <!-- listing -->
@@ -1823,7 +1867,7 @@ header.fixed .navbar {
 	                    </div>
 	                    <div class="text">
 	                      <h5>Download App & create a free  account </h5>
-	                      <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has.</p>
+	                      <p> Get started by downloading the app and signing up in seconds. Create your profile and unlock access to nearby restaurants.</p>
 	                    </div>
 	                    <div class="process_num ">01</div>
 	                </div>
@@ -1835,7 +1879,7 @@ header.fixed .navbar {
 	                    </div>
 	                    <div class="text">
 	                      <h5> Place orders at  your preferred  eatery </h5>
-	                        <p> Dummy text of the printing and typesetting industry lorem Ipsum has been the industrys.</p>
+	                        <p> Browse menus, explore cuisines, and place your order from your favorite restaurant with secure in-app payments.</p>
 	                    </div>
 	                    <div class="process_num">02</div>
 	                </div>
@@ -1847,7 +1891,7 @@ header.fixed .navbar {
 	                    </div>
 	                    <div class="text">
 	                      <h5> Get it delivered directly to your home, effortlessly </h5>
-	                      <p> Printing and typesetting industry lorem Ipsum has been the industrys standard dummy.</p>
+	                      <p> Sit back while your food is freshly prepared and delivered hot to your doorstep with real-time order tracking.</p>
 	                    </div>
 	                    <div class="process_num">03</div>
 	                </div>
@@ -1856,7 +1900,7 @@ header.fixed .navbar {
 
 	            <!-- app buttons -->
 	            <div class="ctr_app_btn_block">
-	              <p> <strong> Get 50% off on your first order ! Grab it now.</strong> </p>
+	              <p> <strong>Get 50% off on your first order — grab it now!.</strong> </p>
 	                <ul class="app_btn">
 	                  <li>
 	                    <a href="#">
@@ -1903,7 +1947,7 @@ header.fixed .navbar {
 	      <div class="section_title" >
 	        <span class="title_badge" style="color: #f3f4ff; background-color: #4c0996;">Testimonials</span>
 	        <h2>Our happy clients</h2>
-	        <p>Lorem Ipsum is simply dummy text of the printing indus orem Ipsum has been the industrys standard dummy text ever since.</p>
+	        <p>What our customers say about us.</p>
 	      </div>
 
 	      <!-- slider  -->
@@ -2298,8 +2342,7 @@ header.fixed .navbar {
   	            <span class="title_badge" style="color: #f3f4ff;">Download</span>
   	            <h2>Download app to enjoy 4500+ foods </h2>
   	            <p>
-  	              Lorem Ipsum is simply dummy text of the printing
-  	              indus orem Ipsum has been the industrys.
+  	              Discover thousands of delicious dishes from your favorite local restaurants. Order in seconds, track in real time, and get fresh food delivered right to your doorstep.
   	            </p>
   	          </div>
   	          <!-- app buttons -->
@@ -2661,224 +2704,243 @@ header.fixed .navbar {
 
     <!-- call to action -->
       <!-- call to action -->
-    <section class="cta_section new white_text" id="support_sec" style="margin-top: 15px;">
+   <!-- call to action -->
+    <section class="cta_section new white_text" id="support_sec" style="margin-top: 15px; max-width: 100;">
       <!-- container start -->
       <div class="container">
-          <div class="cta_box"> 
-            <div class="element">
+        <div class="cta_box">
+          <div class="element">
             <span class="element1"> <img src="images/element_white_3.webp" alt="image"> </span>
             <span class="element2"> <img src="images/element_white_4.webp" alt="image"> </span>
-          </div>          
+          </div>
           <div class="left">
             <div class="section_title" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="100">
-                  <!-- <img src="images/customer-icon.webp" class="customer_icon" alt="image"> -->
-                <!-- h2 -->
-                 <h5 style="color: white; font-size: 30px;">Certified Quality & Government Recognized Partnerships</h5>
-                <!-- p -->
-                <!-- <p>Lorem Ipsum is simply dummy text of the printing.</p> -->
-                </div>                
-          </div>  
-          <div class="right">         
-            <div class="btn_block ">
-                   <img src="./images/Dpiit.png" alt="" style="width: 100px; border-radius: 20px;">
-                   <img src="./images/FSSAI.png" alt="" style="width: 100px; border-radius: 20px;">
-                   <img src="./images/Gwalior.png" alt="" style="width: 100px; border-radius: 20px;">
-                   <img src="./images/MSME.png" alt="" style="width: 100px; border-radius: 20px;">
-                   <img src="./images/ISO.png" alt="" style="width: 100px;  border-radius: 20px;">
-            </div>  
-          </div>              
+              <!-- <img src="images/customer-icon.webp" class="customer_icon" alt="image"> -->
+              <!-- h2 -->
+              <h5 style="color: white; font-size: 30px;">Certified Quality & Government Recognized Partnerships</h5>
+              <!-- p -->
+              <!-- <p>Lorem Ipsum is simply dummy text of the printing.</p> -->
+            </div>
           </div>
+          <div class="right">
+            <div class="btn_block ">
+              <img src="./images/Dpiit.png" alt="" style="width: 100px; border-radius: 20px;">
+              <img src="./images/FSSAI.png" alt="" style="width: 100px; border-radius: 20px;">
+              <img src="./images/Gwalior.png" alt="" style="width: 100px; border-radius: 20px;">
+              <img src="./images/MSME.png" alt="" style="width: 100px; border-radius: 20px;">
+              <img src="./images/ISO.png" alt="" style="width: 100px;  border-radius: 20px;">
+            </div>
+          </div>
+        </div>
       </div>
       <!-- container end -->
     </section>
-    
-   <style>
-    .ctr_cta {
-    margin: 0 auto;
-    margin-top: 50px;
-    text-align: center;
-}
 
-/* ------  CTA section ------------- */
+    <style>
+      .ctr_cta {
+        margin: 0 auto;
+        margin-top: 50px;
+        text-align: center;
+      }
 
-.cta_section.new {
-    padding-top: 50px;
-}
+      /* ------  CTA section ------------- */
 
-.cta_section.new .cta_box{
-    background: var(--primery);
-    position: relative; 
-    z-index: 99;
-    border-radius: 20px;
-    padding: 60px 50px;
-    display: flex;
-    flex-direction: column; /* 🔥 CHANGED: vertical layout */
-    justify-content: center;
-    align-items: center;
-    margin-bottom: -100px;
-}
+      .cta_section.new {
+        padding-top: 50px;
+        max-width: 100%;
+        margin-right: 12px;
+        margin-left: 12px;
+        padding-left: 0;
+        padding-right: 0;
+      }
 
-.cta_section.new .cta_box .section_title{
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    padding-left: 0; /* 🔥 CHANGED: remove left padding */
-    text-align: center; /* 🔥 ADDED: center text */
-    justify-content: center; /* 🔥 ADDED: center content */
-    margin-bottom: 30px; /* 🔥 ADDED: space between heading and buttons */
-}
+      .cta_section.new .container {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+      }
 
-.cta_section.new .cta_box .section_title h3{
-    margin-bottom: 0;
-    line-height: 1.2;
-    width: 100%; /* 🔥 ADDED: full width for centering */
-}
+      .cta_section.new .cta_box {
+        background: var(--primery);
+        position: relative;
+        z-index: 99;
+        border-radius: 20px;
+        padding: 60px 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: -100px;
+        max-width: 100%;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+      }
 
-.cta_section.new .cta_box .section_title p {
-    padding: 0;
-    width: 100%; /* 🔥 ADDED: full width for centering */
-}
+      .cta_section.new .cta_box .section_title {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 30px;
+      }
 
-.cta_section.new .cta_box .section_title .customer_icon{
-    position: absolute;
-    left:0;
-    top:10%;
-}
+      .cta_section.new .cta_box .section_title h3 {
+        margin-bottom: 0;
+        line-height: 1.2;
+        width: 100%;
+      }
 
-.cta_section.new .cta_box .btn_block{
-    display: flex;
-    justify-content: center; /* 🔥 CHANGED: center buttons */
-    align-items: center;
-    gap: 15px;
-    flex-wrap: nowrap;
-}
+      .cta_section.new .cta_box .section_title p {
+        padding: 0;
+        width: 100%;
+      }
 
-/* FIX: Button text cut issue */
-.cta_section.new .cta_box .btn {
-    width: auto;
-    min-width: 150px;
-    padding: 15px 28px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    white-space: nowrap;
-}
+      .cta_section.new .cta_box .section_title .customer_icon {
+        position: absolute;
+        left: 0;
+        top: 10%;
+      }
 
-@media (max-width: 600px) {
-  .cta_section.new .cta_box .btn_block {
-    flex-direction: column;
-  }
+      .cta_section.new .cta_box .btn_block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: nowrap;
+      }
 
-  .cta_section.new .cta_box .btn {
-    width: 100%;
-    min-width: unset;
-  }
-}
+      /* FIX: Button text cut issue */
+      .cta_section.new .cta_box .btn {
+        width: auto;
+        min-width: 150px;
+        padding: 15px 28px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        white-space: nowrap;
+      }
 
-.cta_section.new .cta_box .btn{
-    padding: 15px 30px;
-    background-color: var(--white);
-    border-radius: 12px;
-    white-space: nowrap;
-}
+      @media (max-width: 600px) {
+        .cta_section.new .cta_box .btn_block {
+          flex-direction: column;
+        }
 
-.cta_section.new .cta_box .call_btn {
-    background-color: var(--black);
-    margin-right: 15px;
-    font-weight: 700;
-    border-radius: 12px;
-}
+        .cta_section.new .cta_box .btn {
+          width: 100%;
+          min-width: unset;
+        }
+      }
 
-.cta_section.new .cta_box .email_btn:hover {
-    background-color: var(--black);
-    transition: all ease-in-out .5s;
-    color: var(--white);
-}
+      .cta_section.new .cta_box .btn {
+        padding: 15px 30px;
+        background-color: var(--white);
+        border-radius: 12px;
+        white-space: nowrap;
+      }
 
-.cta_section.new .cta_box .call_btn:hover {
-    background-color: var(--black); 
-    transition: all ease-in-out .5s;
-    color: var(--white); 
-}
+      .cta_section.new .cta_box .call_btn {
+        background-color: var(--black);
+        margin-right: 15px;
+        font-weight: 700;
+        border-radius: 12px;
+      }
 
-.cta_section.new .cta_box .right{
-    width: 100%; /* 🔥 CHANGED: full width */
-}
+      .cta_section.new .cta_box .email_btn:hover {
+        background-color: var(--black);
+        transition: all ease-in-out .5s;
+        color: var(--white);
+      }
 
-.cta_section.new .cta_box .element .element1, .t_element2 {
-    position: absolute;
-}
+      .cta_section.new .cta_box .call_btn:hover {
+        background-color: var(--black);
+        transition: all ease-in-out .5s;
+        color: var(--white);
+      }
 
-.cta_section.new .cta_box .element .element1 {
-    right: 35%;
-    top: 10%;
-    animation: mymove 15s infinite;
-}
+      .cta_section.new .cta_box .right {
+        width: 100%;
+      }
 
-.cta_section.new .cta_box .element .element2 {
-    left: 20%;
-    bottom: 6%;
-    animation: mymove 8s infinite;
-}
+      .cta_section.new .cta_box .element .element1,
+      .t_element2 {
+        position: absolute;
+      }
 
-.cta_section.new .cta_box {
-    transform: translateY(-101px);
-}
+      .cta_section.new .cta_box .element .element1 {
+        right: 35%;
+        top: 10%;
+        animation: mymove 15s infinite;
+      }
 
-/* ===== CTA COLOR FIX ===== */
+      .cta_section.new .cta_box .element .element2 {
+        left: 20%;
+        bottom: 6%;
+        animation: mymove 8s infinite;
+      }
 
-.cta_section.new .cta_box {
-    background-color: #5b159a;
-    color: #ffffff;
-}
+      .cta_section.new .cta_box {
+        transform: translateY(-101px);
+      }
 
-.cta_section.new .cta_box h3,
-.cta_section.new .cta_box p {
-    color: #ffffff;
-}
+      /* ===== CTA COLOR FIX ===== */
 
-.cta_section.new .cta_box .btn {
-    color: #5b159a;
-}
+      .cta_section.new .cta_box {
+        background-color: #5b159a;
+        color: #ffffff;
+      }
 
-.cta_section.new .cta_box .call_btn {
-    background-color: #000000;
-    color: #ffffff;
-}
+      .cta_section.new .cta_box h3,
+      .cta_section.new .cta_box p {
+        color: #ffffff;
+      }
 
-.cta_section.new .cta_box .email_btn {
-    background-color: #ffffff;
-    color: #5b159a;
-}
+      .cta_section.new .cta_box .btn {
+        color: #5b159a;
+      }
 
-.cta_section.new .cta_box .email_btn:hover {
-    background-color: #000000;
-    color: #ffffff;
-}
+      .cta_section.new .cta_box .call_btn {
+        background-color: #000000;
+        color: #ffffff;
+      }
 
-.cta_section.new .cta_box .call_btn {
-    background-color: #ffffff;
-    color: #5b159a;
-    transition: all 0.3s ease;
-}
+      .cta_section.new .cta_box .email_btn {
+        background-color: #ffffff;
+        color: #5b159a;
+      }
 
-/* ===== FINAL Call Us Now Button ===== */
-.cta_section.new .cta_box .call_btn {
-    background-color: #ffffff;
-    color: #5b159a;
-    font-weight: 700;
-    transition: all 0.3s ease;
-}
+      .cta_section.new .cta_box .email_btn:hover {
+        background-color: #000000;
+        color: #ffffff;
+      }
 
-.cta_section.new .cta_box .call_btn:hover,
-.cta_section.new .cta_box .call_btn:focus {
-    background-color: #000000;
-    color: #ffffff;
-    transform: translateY(-2px);
-}
-   </style>
+      .cta_section.new .cta_box .call_btn {
+        background-color: #ffffff;
+        color: #5b159a;
+        transition: all 0.3s ease;
+      }
+
+      /* ===== FINAL Call Us Now Button ===== */
+      .cta_section.new .cta_box .call_btn {
+        background-color: #ffffff;
+        color: #5b159a;
+        font-weight: 700;
+        transition: all 0.3s ease;
+      }
+
+      .cta_section.new .cta_box .call_btn:hover,
+      .cta_section.new .cta_box .call_btn:focus {
+        background-color: #000000;
+        color: #ffffff;
+        transform: translateY(-2px);
+      }
+    </style>
+    <!-- call to action -->
     <!-- call to action --> 
      
     
@@ -2896,7 +2958,7 @@ header.fixed .navbar {
                   <div class="col-lg-5 col-md-6 col-12">
                       <div class="abt_side">
                         <div class="logo"> <img src="images/Zaptodoor New Logo white.png" alt="image" ></div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem sum has been the industrys standard dummytext ever since the when an unknown printer took. </p>
+                        <p>Zaptodoor is a modern food delivery platform connecting you with trusted local restaurants. We make ordering food fast, simple, and reliable — delivering delicious meals right to your doorstep.</p>
                         <ul class="app_btn">
                           <li>
                             <a href="#">
@@ -2935,7 +2997,7 @@ header.fixed .navbar {
                         <li><a href="#">FAQs</a></li>
                         <li><a href="#">Support</a></li>
                         <li><a href="#">How it works</a></li>
-                        <li><a href="#">Terms & conditions</a></li>
+                        <li><a href="terms-condition.html">Terms & conditions</a></li>
                         <li><a href="#">Privacy policy</a></li>
                         </ul>
                     </div>
