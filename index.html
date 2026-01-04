@@ -1638,71 +1638,95 @@ header.fixed .navbar {
 }</style>
 <!-- SLider end -->
 
-    <!-- Our Client section -->
-    <section class="row_am our_client">
+ <!-- Our Client section -->
+<section class="row_am our_client" style="padding: 40px 0;">
 
-      <div class="container">
+  <div class="container">
 
-        <!-- section title -->
-        <div class="section_title" data-aos="fade-up" data-aos-duration="1500">
-          <span class="title_badge" style="color: #f3f4ff; background-color: #4c0996;">Our clients</span>
-          <h2>Trusted by 2.5k+ restaurant  </h2>
+    <!-- section title -->
+    <div class="section_title" data-aos="fade-up" data-aos-duration="1500" style="margin-bottom: 30px;">
+      <span class="title_badge">Our clients</span>
+      <h2>Trusted by 2.5k+ restaurant </h2>
+    </div>
+
+    <!-- Our Client List -->
+    <ul class="client_list" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 0; margin: 0 0 30px 0; list-style: none;">
+      <li style="margin: 0;">
+        <div class="client_logo" data-aos="fade-up" data-aos-duration="1500">
+          <img src="images/Karchi Kadai (2).png" alt="image" style="width: 100%; height: auto; display: block;">
         </div>
+      </li>
+      <li style="margin: 0;">
+        <div class="client_logo" data-aos="fade-up" data-aos-duration="1500">
+          <img src="images/Karchi Kadai (3).png" alt="image" style="width: 100%; height: auto; display: block;">
+        </div>
+      </li>
+      <li style="margin: 0;">
+        <div class="client_logo" data-aos="fade-up" data-aos-duration="1500">
+          <img src="images/Karchi Kadai (6).png" alt="image" style="width: 100%; height: auto; display: block;">
+        </div>
+      </li>
+      <li style="margin: 0;">
+        <div class="client_logo" data-aos="fade-up" data-aos-duration="1500">
+          <img src="images/Karchi Kadai (7).png" alt="image" style="width: 100%; height: auto; display: block;">
+        </div>
+      </li>
+      <li style="margin: 0;">
+        <div class="client_logo" data-aos="fade-up" data-aos-duration="1500">
+          <img src="images/Karchi Kadai (8).png" alt="image" style="width: 100%; height: auto; display: block;">
+        </div>
+      </li>
+      <li style="margin: 0;">
+        <div class="client_logo" data-aos="fade-up" data-aos-duration="1500">
+          <img src="images/Karchi Kadai (9).png" alt="image" style="width: 100%; height: auto; display: block;">
+        </div>
+      </li>
+      <li style="margin: 0;">
+        <div class="client_logo" data-aos="fade-up" data-aos-duration="1500">
+          <img src="images/Karchi Kadai (10).png" alt="image" style="width: 100%; height: auto; display: block;">
+        </div>
+      </li>
+      <li style="margin: 0;">
+        <div class="client_logo" data-aos="fade-up" data-aos-duration="1500">
+          <img src="images/Karchi Kadai (11).png" alt="image" style="width: 100%; height: auto; display: block;">
+        </div>
+      </li>
+    </ul>
 
-        <!-- Our Client List -->
-        <ul class="client_list">
-          <li>
-            <div class="client_logo" data-aos="fade-up" data-aos-duration="1500">
-              <img src="images/Karchi Kadai (2).png" alt="image">
-            </div>
-          </li>
-          <li>
-            <div class="client_logo" data-aos="fade-up" data-aos-duration="1500">
-              <img src="images/Karchi Kadai (3).png" alt="image">
-            </div>
-          </li>
-          <li>
-            <div class="client_logo" data-aos="fade-up" data-aos-duration="1500">
-              <img src="images/Karchi Kadai (6).png" alt="image">
-            </div>
-          </li>
-          <li>
-            <div class="client_logo" data-aos="fade-up" data-aos-duration="1500">
-              <img src="images/Karchi Kadai (7).png" alt="image">
-            </div>
-          </li>
-          <li>
-            <div class="client_logo" data-aos="fade-up" data-aos-duration="1500">
-              <img src="images/Karchi Kadai (8).png" alt="image">
-            </div>
-          </li>
-          <li>
-            <div class="client_logo" data-aos="fade-up" data-aos-duration="1500">
-              <img src="images/Karchi Kadai (9).png" alt="image">
-            </div>
-          </li>
-          <li>
-            <div class="client_logo" data-aos="fade-up" data-aos-duration="1500">
-              <img src="images/Karchi Kadai (10).png" alt="image">
-            </div>
-          </li>
-          <li>
-            <div class="client_logo" data-aos="fade-up" data-aos-duration="1500">
-              <img src="images/Karchi Kadai (11).png" alt="image">
-            </div>
-          </li>
-        </ul>
-
-        <!-- button  -->
-      	<div class="ctr_cta">
-          <div class="btn_block">
-	      	<a href="blog-detail.html" class="btn puprple_btn ml-0">Register Your Restaurant</a>
-
-          </div>
-		</div>
-		
+    <!-- button  -->
+    <div class="ctr_cta" style="margin: 0;">
+      <div class="btn_block" style="text-align: center;">
+        <a href="blog-detail.html" class="btn puprple_btn ml-0">Register Your Restaurant</a>
       </div>
-    </section>
+    </div>
+
+  </div>
+</section>
+
+<!-- Add this style tag in your head section or before closing body tag -->
+<style>
+  @media (max-width: 768px) {
+    .our_client {
+      padding: 30px 15px !important;
+    }
+    
+    .client_list {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 15px !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .our_client {
+      padding: 20px 10px !important;
+    }
+    
+    .client_list {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 10px !important;
+    }
+  }
+</style>
 
     <!-- win win Section Start -->
     <section class="winwin_section row_am" id="benefits_sec">
